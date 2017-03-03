@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jukebox</title>
+    <script src="js/player.js"></script>
+    <script src="js/jukebox.js"></script>
+  </head>
+  <body>
+    <h1>Jukebox</h1>
+
+    <script>
+      const onComplete = function() {
+         console.log('Song finished playing.');
+         let notes = window.prompt("Enter a song string:");
+         let song = parseSong(notes);
+         playSong(song, 400, onComplete);
+      };
+
+      let notes = window.prompt("Enter a song string:");
+      let song = parseSong(notes);
+      playSong(song, 400, onComplete);
+    </script>
+  </body>
+</html>
